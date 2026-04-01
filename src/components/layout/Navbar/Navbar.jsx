@@ -1,4 +1,4 @@
-import { Menu, Moon, X } from "lucide-react";
+import { Menu, Moon, Sun, X } from "lucide-react";
 import { useEffect, useState } from "react";
 import { motion as Motion, AnimatePresence } from "framer-motion";
 import { cn } from "../../../lib/utils";
@@ -8,6 +8,7 @@ export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [active, setActive] = useState(1);
+  const [theme, setTheme] = useState("dark");
 
   useEffect(() => {
     const handleScroll = () => setScrolled(window.scrollY > 20);
@@ -93,7 +94,16 @@ export default function Navbar() {
                 className="p-2 rounded-lg text-gray-400 hover:text-teal-300 hover:bg-white/5 transition-colors"
                 aria-label="Toggle theme"
               >
-                <Moon size={20} />
+                <Moon
+                  size={20}
+                  className={theme === "dark" ? "block" : "hidden"}
+                  onClick={() => setTheme("light")}
+                />
+                <Sun
+                  size={20}
+                  className={theme === "dark" ? "hidden" : "block"}
+                  onClick={() => setTheme("dark")}
+                />
               </Motion.button>
               <Motion.button
                 whileHover={{ scale: 1.05 }}

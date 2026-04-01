@@ -109,7 +109,7 @@ export default function Hero() {
                 }}
                 className="absolute -right-2 top-8 px-3 py-1.5 bg-background/80 backdrop-blur-sm rounded-full shadow-lg border border-white/20 text-sm font-semibold text-gray-200 whitespace-nowrap"
               >
-                React.js
+                Node.js
               </Motion.div>
               <Motion.div
                 animate={{ y: [0, 8, 0] }}
@@ -121,7 +121,7 @@ export default function Hero() {
                 }}
                 className="absolute -left-2 bottom-12 px-3 py-1.5 bg-background/80 backdrop-blur-sm rounded-full shadow-lg border border-white/20 text-sm font-semibold text-gray-200 whitespace-nowrap"
               >
-                Next.js
+                React.js
               </Motion.div>
             </div>
           </Motion.div>

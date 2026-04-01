@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { motion } from "framer-motion";
+import { motion as Motion } from "framer-motion";
 import { Mail, Copy, Check, MapPin, Clock, Send } from "lucide-react";
 
 const personalInfo = {
@@ -24,7 +24,7 @@ export default function Contact() {
     <section id="contact" className="py-20 sm:py-28 px-4">
       <div className="mx-auto max-w-6xl">
         {/* Section Header */}
-        <motion.div
+        <Motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-100px" }}
@@ -41,10 +41,10 @@ export default function Contact() {
             Have a project in mind or want to collaborate? I'd love to hear from you.
             Let's build something amazing together.
           </p>
-        </motion.div>
+        </Motion.div>
 
         {/* Contact Card */}
-        <motion.div
+        <Motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
@@ -112,7 +112,7 @@ export default function Contact() {
               </div>
             </div>
           </div>
-        </motion.div>
+        </Motion.div>
       </div>
     </section>
   );

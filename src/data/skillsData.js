@@ -15,23 +15,10 @@ import {
 
 export const skills = [
   { name: "JavaScript", icon: Code2, level: 5, color: "text-yellow-500" },
-  { name: "TypeScript", icon: Terminal, level: 5, color: "text-blue-500" },
   { name: "React", icon: Layout, level: 5, color: "text-cyan-500" },
-  {
-    name: "Next.js",
-    icon: Globe,
-    level: 4,
-    color: "text-neutral-800 dark:text-neutral-200",
-  },
   { name: "Node.js", icon: Server, level: 4, color: "text-green-600" },
-  { name: "Python", icon: Code2, level: 4, color: "text-blue-400" },
   { name: "HTML/CSS", icon: Palette, level: 5, color: "text-orange-500" },
   { name: "Tailwind CSS", icon: Palette, level: 5, color: "text-teal-500" },
-  { name: "PostgreSQL", icon: Database, level: 3, color: "text-sky-500" },
   { name: "MongoDB", icon: Database, level: 3, color: "text-green-500" },
   { name: "Git", icon: GitBranch, level: 5, color: "text-rose-500" },
-  { name: "Docker", icon: Container, level: 3, color: "text-blue-600" },
-  { name: "AWS", icon: Cloud, level: 3, color: "text-amber-500" },
-  { name: "React Native", icon: Smartphone, level: 3, color: "text-purple-500" },
-  { name: "REST APIs", icon: Shield, level: 4, color: "text-indigo-500" },
 ];

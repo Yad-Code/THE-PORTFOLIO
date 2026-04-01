@@ -11,19 +11,39 @@ export default function Navbar() {
 
   useEffect(() => {
     const handleScroll = () => setScrolled(window.scrollY > 20);
+    const handleActive = () => {
+      if (window.scrollY > 2000) setActive(4);
+      else if (window.scrollY > 1300) setActive(3);
+      else if (window.scrollY > 580) setActive(2);
+      else setActive(1);
+    };
+
     window.addEventListener("scroll", handleScroll, { passive: true });
-    return () => window.removeEventListener("scroll", handleScroll);
+    window.addEventListener("scroll", handleActive, { passive: true });
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+      window.removeEventListener("scroll", handleActive);
+    };
   }, []);
 
   const navLinks = [
-    { id: 1, name: "Home", href: "/" },
-    { id: 2, name: "Skills", href: "/" },
-    { id: 3, name: "Projects", href: "/" },
-    { id: 4, name: "Contact", href: "/" },
+    { id: 1, name: "Home", href: "/home" },
+    { id: 2, name: "Skills", href: "/skills" },
+    { id: 3, name: "Projects", href: "/projects" },
+    { id: 4, name: "Contact", href: "/contanct" },
   ];
 
   const handleLinkClick = (id) => {
-    setActive(id);
+    if (id === 1) {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    } else if (id === 2) {
+      window.scrollTo({ top: 590, behavior: "smooth" });
+    } else if (id === 3) {
+      window.scrollTo({ top: 1310, behavior: "smooth" });
+    } else if (id === 4) {
+      window.scrollTo({ top: 2000, behavior: "smooth" });
+    }
+
     setMobileMenuOpen(false);
   };
 
@@ -34,7 +54,7 @@ export default function Navbar() {
           "fixed top-0 left-0 right-0 z-50 transition-all duration-300",
           !scrolled
             ? "bg-background/80 backdrop-blur-lg shadow-none border-transparent"
-            : "bg-transparent  border-b shadow-sm"
+            : "bg-transparent  border-b shadow-sm",
         )}
         initial={{ y: -100 }}
         animate={{ y: 0 }}
@@ -58,7 +78,9 @@ export default function Navbar() {
                     id={link.id}
                     name={link.name}
                     active={active}
-                    onClick={() => setActive(link.id)}  // FIXED: pass arrow function
+                    onClick={() => {
+                      handleLinkClick(link.id);
+                    }}
                   />
                 </li>
               ))}

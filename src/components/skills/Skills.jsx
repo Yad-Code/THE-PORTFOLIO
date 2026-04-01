@@ -27,6 +27,9 @@ export default function Skills() {
           transition={{ duration: 0.5 }}
           className="text-center mb-14"
         >
+          <span className=" text-sm font-semibold uppercase tracking-widest text-teal-500">
+            WHAT I KNOW
+          </span>
           <h2 className="mt-2 text-3xl sm:text-4xl font-bold tracking-tight text-white">
             Skills
           </h2>

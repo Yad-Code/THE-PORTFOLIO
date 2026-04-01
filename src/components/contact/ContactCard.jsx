@@ -16,7 +16,7 @@ export default function ContactCard() {
       )}
     >
       {/* Subtle gradient overlay on hover */}
-      <div className="absolute inset-0 rounded-2xl bg-gradient-to-br from-teal-500/0 to-emerald-500/0 group-hover:from-teal-500/5 group-hover:to-emerald-500/5 transition-all duration-300 pointer-events-none" />
+      <div className="absolute inset-0 rounded-2xl bg-linear-to-br from-teal-500/0 to-emerald-500/0 group-hover:from-teal-500/5 group-hover:to-emerald-500/5 transition-all duration-300 pointer-events-none" />
 
       <div className="relative z-10 px-6 pb-6 pt-8 space-y-6">
         {/* Email input with copy button */}

@@ -124,7 +124,8 @@ export default function Hero() {
                 React.js
               </Motion.div>
             </div>
-          </Motion.div>
+          </Motion.div> 
+          
         </div>
       </div>
 

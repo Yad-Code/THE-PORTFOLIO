@@ -51,7 +51,7 @@ export default function ContactCard() {
 
         {/* Action buttons */}
         <div className="flex flex-wrap gap-3 pt-2">
-          <button className="group/btn inline-flex items-center gap-2 px-5 py-2.5 bg-gradient-to-r from-teal-500 to-cyan-500 rounded-lg font-semibold text-white shadow-md hover:shadow-lg transition-all duration-300 hover:scale-105 text-sm">
+          <button className="group/btn inline-flex items-center gap-2 px-5 py-2.5 bg-linear-to-r from-teal-500 to-cyan-500 rounded-lg font-semibold text-white shadow-md hover:shadow-lg transition-all duration-300 hover:scale-105 text-sm">
             <Send className="w-4 h-4 group-hover/btn:translate-x-0.5 transition-transform" />
             Send Message
           </button>

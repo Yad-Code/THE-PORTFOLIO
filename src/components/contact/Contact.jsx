@@ -54,7 +54,7 @@ export default function Contact() {
           <div
             className={`
               group relative flex flex-col rounded-2xl border border-teal-500/20
-              bg-gradient-to-br from-teal-500/5 via-transparent to-emerald-500/5
+              bg-linear-to-br from-teal-500/5 via-transparent to-emerald-500/5
               bg-black/40 backdrop-blur-sm transition-all duration-300
               hover:shadow-lg hover:shadow-teal-500/20 hover:-translate-y-1 hover:border-teal-500/50
             `}

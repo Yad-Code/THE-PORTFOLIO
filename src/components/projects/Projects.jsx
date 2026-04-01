@@ -1,4 +1,4 @@
-import { motion } from "framer-motion";
+import { motion as Motion } from "framer-motion";
 import ProjectCard from "./ProjectCard";
 
 const projects = [
@@ -46,7 +46,7 @@ export default function Projects() {
     <section id="projects" className="py-20 sm:py-28 px-4">
       <div className="mx-auto max-w-6xl">
         {/* Section header */}
-        <motion.div
+        <Motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-100px" }}
@@ -63,10 +63,10 @@ export default function Projects() {
             Here are some of the projects I've worked on. Each one taught me
             something new and pushed me to grow as a developer.
           </p>
-        </motion.div>
+        </Motion.div>
 
         {/* Projects grid */}
-        <motion.div
+        <Motion.div
           variants={containerVariants}
           initial="hidden"
           whileInView="visible"
@@ -74,7 +74,7 @@ export default function Projects() {
           className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
         >
           {projects.map((project, idx) => (
-            <motion.div key={idx} variants={itemVariants}>
+            <Motion.div key={idx} variants={itemVariants}>
               <ProjectCard
                 title={project.title}
                 description={project.description}
@@ -82,9 +82,9 @@ export default function Projects() {
                 githubUrl={project.githubUrl}
                 tags={project.tags}
               />
-            </motion.div>
+            </Motion.div>
           ))}
-        </motion.div>
+        </Motion.div>
       </div>
     </section>
   );

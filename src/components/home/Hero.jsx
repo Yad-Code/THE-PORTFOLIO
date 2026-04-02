@@ -1,6 +1,8 @@
 import { ArrowDown, Contact } from "lucide-react";
 import { motion as Motion } from "framer-motion";
 
+import personalImg from "../../assets/images/Personal.jpg";
+
 export default function Hero() {
   const personalInfo = {
     name: "Yad Hussein",
@@ -94,7 +96,7 @@ export default function Hero() {
               <div className="absolute -inset-4 rounded-full bg-linear-to-tr from-teal-500 via-emerald-500 to-cyan-500 opacity-30 blur-xl animate-pulse" />
               <div className="relative w-48 h-48 sm:w-56 sm:h-56 lg:w-64 lg:h-64 rounded-full overflow-hidden border-4 border-black/30 shadow-2xl">
                 <img
-                  src="https://avatars.githubusercontent.com/u/12345678?v=4" // Replace with your actual image URL
+                  src={personalImg} // Replace with your actual image URL
                   alt={`${personalInfo.name} - profile photo`}
                   className="w-full h-full object-cover"
                 />
@@ -124,8 +126,7 @@ export default function Hero() {
                 React.js
               </Motion.div>
             </div>
-          </Motion.div> 
-          
+          </Motion.div>
         </div>
       </div>
 
